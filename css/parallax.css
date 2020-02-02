@@ -1,0 +1,147 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+html,body {
+	height: 100%;
+}
+body {
+	font-family: Arial;
+}
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+}
+.page {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.parallax {
+	position: relative;
+	background: #000200;
+	height: 100%;
+}
+.parallax__montain {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.parallax__montain_1 {
+	background: url('../images/m_1.png') top center / 150% no-repeat;
+}
+.parallax__montain_2 {
+	background: url('../images/m_2.png') bottom right / 45% no-repeat;
+	z-index: 1;
+}
+.parallax__montain_3 {
+	background: url('../images/m_3.png') left bottom / 45% no-repeat;
+	z-index: 1;
+}
+.parallax__fog {
+	background: url('../images/fog_1.png') bottom / 100% no-repeat;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+.content {
+	position: relative;
+	background-color: rgba(0, 0, 0, 0.1);
+}
+.content__body {
+	max-width: 700px;
+	padding: 20px;
+	margin: 0 auto;
+}
+.content__header {
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	padding: 0 20px;
+}
+.content__title {
+	color: white;
+	font-size: 100px;
+}
+.content__subtitle {
+	color: white;
+	font-size: 70px;
+}
+.content__article {
+	padding: 25px;
+	font-size: 18px;
+	line-height: 24px;
+}
+.content__article p {
+	color: white;
+	margin-bottom: 20px;
+}
+
+.star {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	animation: animate 8s ease-in-out infinite,
+			   backgroundmove 16s linear infinite;
+}
+.star1 {
+	animation-delay: 0s;
+	background-image: url(../images/star1.png);
+}
+.star2 {
+	animation-delay: -1s;
+	background-image: url(../images/star2.png);
+}
+.star3 {
+	animation-delay: -2s;
+	background-image: url(../images/star3.png);
+}
+.star4 {
+	animation-delay: -3s;
+	background-image: url(../images/star4.png);
+}
+.star5 {
+	animation-delay: -4s;
+	background-image: url(../images/star5.png);
+}
+.star6 {
+	animation-delay: -5s;
+	background-image: url(../images/star6.png);
+}
+.star7 {
+	animation-delay: -6s;
+	background-image: url(../images/star7.png);
+}
+.star8 {
+	animation-delay: -7s;
+	background-image: url(../images/star8.png);
+}
+@keyframes animate {
+	0%, 20%, 40%, 60%, 80%, 100% {
+		opacity: 0;
+	}
+	10%, 30%, 50%, 70%, 90% {
+		opacity: 1;
+	}
+}
+@keyframes backgroundmove {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(2);
+	}
+}
